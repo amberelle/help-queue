@@ -1,0 +1,31 @@
+{{#if addNewTicket}}
+  <h1>New Ticket</h1>
+    <div>
+      <form>
+        <div class="form-group">
+          <label for="user">User</label>
+          {{input placeholder="User Name" value=user id="user"}}
+        </div>
+
+        <div class="form-group">
+          <label for="location">Location</label>
+          {{input value=location id="location"}}
+        </div>
+
+        <div class="form-group">
+          <label for="time">Time</label>
+          {{input type="time" value=time id="time"}}
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description</label>
+          {{input value=description id="description"}}
+        </div>
+
+
+        <button {{action 'save1Ticket'}}>submit</button>
+      </form>
+    </div>
+{{else}}
+    <button {{action 'ticketFormShow'}}>New Ticket</button>
+{{/if}}

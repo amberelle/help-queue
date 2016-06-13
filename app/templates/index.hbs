@@ -1,0 +1,15 @@
+<h1>Help Queue</h1>
+<p>
+  Create a new ticket to get help from teacher
+</p>
+
+{{new-ticket save2Ticket="save3Ticket"}}
+
+<ul>
+  {{#each model as |ticket|}}
+  <p>user: {{ticket.user}}</p>
+  <p>location: {{ticket.location}}</p>
+  <p>time: {{ticket.time}}</p>
+  <p>description: {{ticket.description}}</p>
+  {{/each}}
+</ul>
